@@ -16,7 +16,7 @@
 
 ## O que vamos aprender?
 
-Neste bloco, prepare-se para aprender os principais conceitos acerca da biblioteca recomendada para aplicações construídas com React, a React Testing Library, ou RTL.
+Neste bloco, prepare-se para aprender os principais conceitos acerca da biblioteca de testes recomendada para aplicações construídas com React, a React Testing Library, ou RTL.
 
 <br>[^](#sumário)
 
@@ -28,7 +28,7 @@ Neste bloco, prepare-se para aprender os principais conceitos acerca da bibliote
 - Entender o que é a RTL,
 - Compreender a importância dos testes na sua aplicação,
 - Usar alguns dos principais seletores,
-- Desenvolver testes usando React Testing Library!
+- Desenvolver testes usando a React Testing Library!
 
 <br>[^](#sumário)
 
@@ -56,9 +56,9 @@ Dessa forma, podemos concluir que testes são poderosas ferramentas que ajudam n
 
 A React Testing Library é uma biblioteca utilizada para desenvolver testes no frontend de sua aplicação. Através de seletores, condições e disparos de eventos, a pessoa desenvolvedora é capaz de simular a interação de um usuário com a página e ter a garantia que os componentes renderizam as informações corretas, no momento certo.
 
-Saiba que, apesar de não ser a única biblioteca de testes disponível para testar sua aplicação em React, é a ferramenta recomendada na [documentação](https://pt-br.reactjs.org/docs/testing.html) oficial do React. 
+Saiba que, apesar de não ser a única biblioteca de testes disponível para testar sua aplicação em React, é a ferramenta recomendada na [documentação](https://pt-br.reactjs.org/docs/testing.html) oficial. 
 
-Você deve ser lembrar da biblioteca [Jest](https://jestjs.io/). A RTL foi desenvolvida em cima do mesmo conceito e utiliza a simulação do DOM para prover um ambiente onde podemos testar a renderização das informações na tela da pessoa usuária.
+Você deve se lembrar da biblioteca [Jest](https://jestjs.io/). A RTL foi desenvolvida em cima do mesmo conceito e utiliza a simulação do DOM para prover um ambiente onde podemos testar a renderização das informações na tela da pessoa usuária.
 
 Note que em nenhuma momento é falado sobre testes em funções propriamente ditas. Embora sejam disponíveis ferramentas para mockar atividades assíncronas, funções e promises, o objetivo sempre será analizar o que é renderizado, independente do processo e das lógicas utilizadas para isso.
 
@@ -139,8 +139,10 @@ A partir do render(), considere que dentro do escopo do seu it/test a simulaçã
 ### Etapa 2 -> get;
 <br>
 Com a simulação pronta, devemos agora selecionar um elemento da página para testarmos. Pense nos seletores possuindo a funcionalidade similar ao querySelector, getElementById ou getElementsByClassName. A vantagem é que aqui temos algumas opções a mais! Durante essa introdução iremos trabalhar com alguns como getByText, getAllByText, getByTestId e getByRole.
-
+<br>
+<br>
 Vamos dizer que, ao renderizar a página About Me, seu nome apareça na tela imediatamente. Você já sabe o seu nome porque é, digamos, seu portfólio. Portanto, é possível fazer da seguinte forma:
+
 ```
   it('deve renderizar meu nome na página de About Me', () => {
     render(<AboutMe />)
@@ -181,13 +183,13 @@ Existe uma lista razoavelmente grande de roles. Esse seletor pode ser útil para
 
 Maravilha! Vimos até agora alguns seletores que miram em elementos presentes na página e nos trazem um e somente um elemento em específico. Mas digamos agora que nossa página About Me contenha seu nome em dois locais diferentes. 'John Doe' aparece tanto no heading quanto no subtítulo de um artigo muito interessante que você resolveu deixar fixado. Dessa forma, temos:
 
-Um parágrafo com seu nome:
+Um heading com seu nome:
 ```
-<p>John Doe<p>
+<h1>John Doe</h1>
 ```
 Um span pequenino como subtítulo do thumbnail do artigo:
 ```
-<span>John Doe<span>
+<span>John Doe</span>
 ```
 Neste caso, não podemos usar o seletor normal, porque este texto existe em dois locais diferentes. Como vamos saber em qual dois iremos mirar? É aí que entra o prefixo getAll. Os seletores com getAll irão varrer a página e retornar um array com todos os elementos que correspondem a sua pesquisa. Exemplo:
 ```
@@ -198,13 +200,13 @@ Neste caso, não podemos usar o seletor normal, porque este texto existe em dois
 ```
 Lembre-se, o retorno será um array! Portanto, você pode usar qualquer método próprio para acessar informações de um array. O array retornado é:
 ```
-[<p>John Doe<p>, <span>John Doe<span>];
+[<h1>John Doe</h1>, <span>John Doe</span>];
 ```
 Logo, sabemos que a posição [0] é o parágrafo, a posição [1] é o span e a length do array é 2.
 
 Imagine as possibilidades! Use sua imaginação.
 
-Digamos, agora, que em sua página About Me há uma lista de tecnologias que é atualizada a medida em que você aprende mais uma ferramenta. Já na sua página de Contact, para contato, são exibidos uma série de radio buttons onde a pessoa usuária pode escolher caso queria enviar uma pergunta sobre uma tecnologia em específico. Ou seja, você atualiza sua lista manualmente e espera que a quantidade de botões clicáveis seja acrescentada dinamicamente durante a renderização da página.
+Digamos, agora, que em sua página About Me há uma lista de tecnologias que é atualizada a medida em que você aprende mais uma ferramenta. Já na sua página de Contact, para contato, são exibidos uma série de radio buttons onde a pessoa usuária pode escolher caso queria enviar uma pergunta sobre uma tecnologia em específico. Ou seja, você atualiza sua lista manualmente e espera que a quantidade de botões clicáveis seja manejada dinamicamente durante a renderização da página.
 
 Uma ideia para verificar que são exibidas as mesmas quantidades de itens tanto na lista no About Me quanto no Contact é usar o seletor getAll nos seus testes e medir o tamanho do array de resposta. Exemplo:
 ```

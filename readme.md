@@ -14,18 +14,18 @@ Orientei, também, que a pessoa usuária faça o teste manual (brincar com a apl
 :)
 
 ----------------------------
-referências:
-[What is React Testing Library](https://www.youtube.com/watch?v=JKOwJUM4_RM)
-[Documentação RTL](https://testing-library.com/)
-[Documentação React](https://reactjs.org/docs/testing.html)
-[Cheatsheet RTL](https://github.com/testing-library/react-testing-library/raw/main/other/cheat-sheet.pdf);
-[Course Trybe](https://app.betrybe.com/course/front-end/testes-automatizados-com-react-testing-library/rtl-primeiros-passos/4b749a62-3f4a-4fe6-872e-3d2853f089c8/o-que-vamos-aprender/4bdecc8b-73ad-4c51-b640-9e3902c5fc55?use_case=calendar);
+referências:<br>
+[What is React Testing Library](https://www.youtube.com/watch?v=JKOwJUM4_RM)<br>
+[Documentação RTL](https://testing-library.com/)<br>
+[Documentação React](https://reactjs.org/docs/testing.html)<br>
+[Cheatsheet RTL](https://github.com/testing-library/react-testing-library/raw/main/other/cheat-sheet.pdf);<br>
+[Course Trybe](https://app.betrybe.com/course/front-end/testes-automatizados-com-react-testing-library/rtl-primeiros-passos/4b749a62-3f4a-4fe6-872e-3d2853f089c8/o-que-vamos-aprender/4bdecc8b-73ad-4c51-b640-9e3902c5fc55?use_case=calendar);<br>
 ----------------------------
 
 ----------------------------
-links adicionais:
-[outras bibliotecas para testar](https://geekflare.com/react-testing-library-utility/)
-[aria roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques);
-[fireEvent](https://testing-library.com/docs/dom-testing-library/api-events/)
-[lista de eventos](https://www.w3schools.com/tags/ref_eventattributes.asp)
+links adicionais:<br>
+[outras bibliotecas para testar](https://geekflare.com/react-testing-library-utility/)<br>
+[aria roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques);<br>
+[fireEvent](https://testing-library.com/docs/dom-testing-library/api-events/)<br>
+[lista de eventos](https://www.w3schools.com/tags/ref_eventattributes.asp)<br>
 ----------------------------
