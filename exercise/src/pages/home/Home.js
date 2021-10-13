@@ -108,7 +108,7 @@ renderDitado = (ditado, favorites) => (
     data-testid="ditado"
     className="noSelect"
   >
-    {!ditado || ditado === '' ? ditados[0] : ditado}
+    {ditado}
     {this.isFavorite(ditado, favorites)}
   </p>
 )

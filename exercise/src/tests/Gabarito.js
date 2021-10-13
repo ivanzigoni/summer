@@ -9,10 +9,10 @@ import Home from '../pages/home/Home';
 Este exercício está dividido em 3 partes.
 
 Parte 1 -> navegue até o código da aplicação, veja quais IDs de teste foram utilizados e complete
-a lista abaixo para usar como documentação de consulta nos testes.
+a lista abaixo para usar como consulta durante a implementação dos testes.
 
 Parte 2 -> complete os testes do primeiro describe completando a lacuna dos seletores e/ou das condições.
-Todos os testes devem passar com os pares de seletor/condições corretos.
+Todos os testes devem passar com os pares de seletor/condição corretos.
 
 Parte 3 -> complete ou desenvolva os testes do segundo e terceiro describe. O que deve ser testado
 já está especificado na descrição dos its.
