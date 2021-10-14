@@ -21,5 +21,5 @@ export const description = [
   'Aproxime-se e não tenha medo!',
   'Neste pequeno aplicativo, você poderá conhecer alguns ditados populares.',
   'Caso goste de algum, basta clicar duas vezes no ditado.',
-  'Caso decida que ele não passa de balela, clique no botão para denunciar uma balela.',
+  'Caso decida que ele não passa de balela, clique no botão para denunciá-la.',
 ].join(' ');

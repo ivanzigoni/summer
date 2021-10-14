@@ -41,6 +41,11 @@ IDs de teste utilizados na aplicação (data-testid):
   -> Botão para desfavoritar: "btn-unfavorite"
   -> Ditado: "ditado"
 ==================Complete aqui!===================
+
+================LEMBRETE===================
+Comando para rodar os testes: npm run tests
+Descomente um expect por vez!
+================LEMBRETE===================
 */
 
 const isFavorite = ', como diria o velho ditado!';
