@@ -136,7 +136,7 @@ render() é a função que deve ser chamada no começo de cada teste. Recebe com
 ```
 
 <br>
-A partir do render(), considere que dentro do escopo do seu it/test a simulação está criada. Com esse ambiente criado, para acessa-lo a fim de desenvolver nossos testes, é necessário evidencia-lo com o .screen, que referencia justamente a árvore DOM simulada.
+A partir do render(), considere que dentro do escopo do seu it/test a simulação está criada. Com esse ambiente criado, para acessa-lo a fim de desenvolver nossos testes, é necessário evidencia-lo com o <code>.screen</code>, que referencia justamente a árvore DOM simulada.
 
 <br>[^](#sumário)
 
@@ -164,12 +164,12 @@ Mas e se o conteúdo for gerado dinamicamente? Sabemos que algum texto deve ser 
 Primeiro, sabemos que a informação (data e hora do dia) sempre será renderizada dentro de um determinado parágrafo:
 <br>
 ```
-<p>{data}</p>
+  <p>{data}</p>
 ```
 
 Não sabemos qual texto será renderizado, mas queremos ter certeza que ele esteja lá. Adicionamos um data-testid:
 ```
-<p data-testid="data-display">{data}</p>
+  <p data-testid="data-display">{data}</p>
 ```
 
 E dessa forma, podemos acessar este elemento no teste com o seletor getByTestId:
@@ -181,7 +181,7 @@ E dessa forma, podemos acessar este elemento no teste com o seletor getByTestId:
 ```
 Agora, vamos considerar que você queira testar o título da sua página AboutMe. Sabemos que é possível capturar o texto diretamente, mas dessa vez queremos pegar por role. Sabemos que o título da sua página é um texto encapsulado em um ```<h1>```, ou um elemento de role heading e de level 1.
 ```
-<h1>John Doe</h1>
+  <h1>John Doe</h1>
 ```
 Dessa forma, podemos mirar nosso seletor na tag html ao invés do texto contido dentro dela da seguinte forma:
 ```
@@ -210,11 +210,11 @@ Maravilha! Vimos até agora alguns seletores que miram em elementos presentes na
 
 Um heading com seu nome:
 ```
-<h1>John Doe</h1>
+  <h1>John Doe</h1>
 ```
 Um span pequenino como subtítulo do thumbnail do artigo:
 ```
-<span>John Doe</span>
+  <span>John Doe</span>
 ```
 Neste caso, não podemos usar o seletor normal, porque este texto existe em dois locais diferentes. Como vamos saber em qual dois iremos mirar? É aí que entra o prefixo getAll. Os seletores com getAll irão varrer a página e retornar um array com todos os elementos que correspondem a sua pesquisa. Exemplo:
 ```
@@ -225,7 +225,7 @@ Neste caso, não podemos usar o seletor normal, porque este texto existe em dois
 ```
 Lembre-se, o retorno será um array! Portanto, você pode usar qualquer método próprio para acessar informações de um array. O array retornado é:
 ```
-[<h1>John Doe</h1>, <span>John Doe</span>];
+  [<h1>John Doe</h1>, <span>John Doe</span>];
 ```
 Logo, sabemos que a posição <code>[0]</code> é o parágrafo, a posição <code>[1]</code> é o span e a length do array é 2.
 
@@ -237,7 +237,7 @@ Uma ideia para verificar que são exibidas as mesmas quantidades de itens tanto 
 <br>
 
 ```
-const techList = ['Javascript', 'MongoDB', 'React', 'RTL'];
+  const techList = ['Javascript', 'MongoDB', 'React', 'RTL'];
 
   it('deve renderizar botões para todas as tecnologias', () => {
     render(<AboutMe />)
